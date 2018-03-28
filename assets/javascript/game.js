@@ -4,7 +4,9 @@ var words = [
     "rose",
     "dorothy",
     "sophia",
-    "miami"]
+    "miami",
+    "retirement",
+    "friends"]
 var wins = 0;
 var losses = 0;
 var letters = "";
