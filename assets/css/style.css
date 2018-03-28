@@ -1,0 +1,49 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+body {
+    background-color: #72cadc;
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5em;
+}
+
+.clear {
+    clear: both;
+}
+
+.banner img {
+    position: relative;    
+    width: 50%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+    top: -170px;
+
+}
+
+.logo img{
+    width: 80%;
+    max-width: 700px;
+
+}
+
+.game {
+    position: relative;
+    width: 60%;
+    min-width: 960px;
+    top: -240px;
+    margin: 0 auto;
+    border: solid 1px white;
+    background-color: #30555C;
+    z-index: 1;
+    padding: 70px 0;
+}

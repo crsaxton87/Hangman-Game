@@ -4,36 +4,55 @@ var words = [
     "rose",
     "dorothy",
     "sophia",
-    "miami"];
+    "miami"]
 var wins = 0;
 var losses = 0;
-var letters = [];
+var letters = "";
 var win = false;
+var answer = "";
+var guesses = "";
 
 // Display wins / losses default
 document.getElementById("wins").innerHTML = wins;
 document.getElementById("losses").innerHTML = losses;
 
-// Computer word selection
-var answer = words[Math.floor(Math.random() * words.length)];
+// Reset Function
+function reset() {
+    
+    // Computer word selection
+    answer = words[Math.floor(Math.random() * words.length)];
 
-// Set answer array
-answerArr = [];
-for (var i = 0; i < answer.length; i++) {
+    // Set answer array
+    answerArr = [];
+    for (var i = 0; i < answer.length; i++) {
     answerArr[i] = "_";
+    }
+
+    // Display answer array
+    document.getElementById("current").innerHTML = answerArr.join(" ");
+
+    // Display guesses remaining
+    guesses = answer.length + 6;
+    document.getElementById("guesses").innerHTML = guesses;
+
+    // Clear letters already guessed
+    letters = "";
+    document.getElementById("letters").innerHTML = letters;
+
 }
 
-// Display answer array
-document.getElementById("current").innerHTML = answerArr.join(" ");
+// Initial Reset
+reset();
 
-// Display guesses remaining
-var guesses = answer.length + 6;
-document.getElementById("guesses").innerHTML = guesses;
 
-    // When key pressed
-    document.onkeyup = function(event) {
-        var keypress = event.key;
-        var keymatch = false;
+// When key pressed
+document.onkeyup = function(event) {
+    var keypress = event.key;
+    var keycode = event.keyCode;
+    var keymatch = false;
+
+    //  Check if key is in alphabet
+    if (keycode >= 65 && keycode <= 90) {
 
         // Check if key is in answer
         for (var j = 0; j < answer.length; j++) {
@@ -59,6 +78,7 @@ document.getElementById("guesses").innerHTML = guesses;
         if (guesses <= 0) {
             losses++;
             document.getElementById("losses").innerHTML = losses;
+            reset();
         }
 
         // Win logic
@@ -77,6 +97,8 @@ document.getElementById("guesses").innerHTML = guesses;
         if (win===true) {
             wins++;
             document.getElementById("wins").innerHTML = wins;
+            reset();
         }
     }
+}
 
