@@ -36,8 +36,11 @@ function reset() {
     document.getElementById("guesses").innerHTML = guesses;
 
     // Clear letters already guessed
-    letters = "";
+    letters = " ";
     document.getElementById("letters").innerHTML = letters;
+
+    // Insert invisible underscore for layout
+    document.getElementById("blankspace").style.opacity = "0";
 
 }
 
@@ -67,8 +70,11 @@ document.onkeyup = function(event) {
         if (keymatch === false) {
             guesses -= 1;
             document.getElementById("guesses").innerHTML = guesses;
+            // Hide invisible underscore
+            document.getElementById("blankspace").style.display = "none";
             letters += " " + keypress;
             document.getElementById("letters").innerHTML = letters;
+            
         }
         else {
             keymatch = false;
@@ -86,12 +92,10 @@ document.onkeyup = function(event) {
             // Are there any blanks left?
             if (answerArr[k] === "_") {
                 win = false;
-                console.log(win);
                 break;
             }
             else {
                 win = true;
-                console.log(win);
             }
         }
         if (win===true) {

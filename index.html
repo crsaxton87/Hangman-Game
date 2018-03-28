@@ -4,26 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Poiret+One" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+
+    <title>Golden Girls Hangman</title>
 </head>
 <body>
     <div class="banner"><img src="assets/images/top.jpg"></div>
-    <div class="logo"><img src="assets/images/title.png"></div>
+    <div class="logo"><img src="assets/images/title-gold.png"></div>
     <div class="clear"></div>
 
-    <div class="game">
-        <p>Press any key to get started!</p>
-        <p>Wins: <span id="wins"></span></p>
-        <p>Losses: <span id="losses"></span></p>
-        <p>Current word</p>
-        <p id="current"></p>
-        <p>Number of guesses remaining:</p>
-        <p id="guesses"></p>
-        <p>Letters already guessed:</p>
-        <p id="letters"></p>
+    <div class="container game">
+        <div class="row">
+            <div class="col-md-6">                
+                <p>Press any key to get started!</p><br>
+                <p>Current word</p>
+                <p id="current"></p><br>
+                <p style="font-size: .75em;">Wins: <span id="wins"></span></p>
+                <p style="font-size: .75em;">Losses: <span id="losses"></span></p>
+                <br>
+            </div>
+            <div class="col-md-6">
+                <p>Number of guesses remaining:</p>
+                <p id="guesses"></p>
+                <p>Letters already guessed:</p>
+                <p id="letters"><div id="blankspace">_</div></p>
+            </div>
+        </div>
     </div>
-
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 

@@ -8,8 +8,8 @@ body {
     background-color: #72cadc;
     text-align: center;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.5em;
+    font-family: 'Comfortaa', cursive;
+    font-size: 3em;
 }
 
 .clear {
@@ -26,24 +26,36 @@ body {
 .logo {
     position: relative;
     z-index: 2;
-    top: -170px;
+    top: -140px;
 
 }
 
 .logo img{
-    width: 80%;
+    width: 40%;
     max-width: 700px;
 
 }
 
 .game {
     position: relative;
-    width: 60%;
-    min-width: 960px;
-    top: -240px;
+    width: 70%;
+    top: -180px;
     margin: 0 auto;
-    border: solid 1px white;
+    border: dashed 10px white;
     background-color: #30555C;
     z-index: 1;
-    padding: 70px 0;
+    padding: 40px 40px 0 40px;
+}
+
+p#current {
+    font-size: 2em;
+}
+
+p#guesses, p#letters {
+    font-size: 2.5em;
+}
+
+#blankspace {
+    opacity: 100;
+    font-size: 2.5em;
 }
