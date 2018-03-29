@@ -5,7 +5,6 @@ var words = [
     "dorothy",
     "sophia",
     "miami",
-    "retirement",
     "friends"]
 var wins = 0;
 var losses = 0;
@@ -101,8 +100,17 @@ document.onkeyup = function(event) {
             }
         }
         if (win===true) {
+
             wins++;
             document.getElementById("wins").innerHTML = wins;
+
+            // Audio play
+            var friend = document.getElementById("friend");
+            function playFriend() {
+                friend.play();
+            }
+            playFriend();
+
             reset();
         }
     }
